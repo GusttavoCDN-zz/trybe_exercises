@@ -1,0 +1,126 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+h2 {
+  text-decoration: underline;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid black;
+}
+
+header p {
+  font-size: 1.5rem;
+  text-shadow: black 0.1rem 0.1rem 0.1rem;
+}
+
+#nav_header ul li {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  list-style: none;
+  text-decoration: underline;
+}
+
+/* ------------------ */
+
+.aside-one {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid black;
+}
+
+.aside-two {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid black;
+}
+/* --------------------- */
+
+.main-content {
+  display: flex;
+  margin: 15px;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+  border-bottom: 1px solid black;
+}
+
+.main-content h1 {
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.main-content > p::after {
+  content: "---";
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 10px 0;
+}
+
+/* ------------ */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px;
+}
+
+footer h3 {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 650px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  header {
+    width: 100%;
+  }
+
+  .aside-one, .aside-two, .main-content, footer {
+    flex-grow: 1;
+  }
+
+  .aside-one {
+    border-right: 1px dashed gray;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  header {
+    flex-basis: 50%;
+    border-right: 1px dashed gray;
+  }
+
+  header p {
+    font-size: 2rem;
+  }
+
+  .aside-one, .aside-two {
+    flex-basis: 25%;
+  }
+
+  .main-content {
+    text-align: justify;
+  }
+}
