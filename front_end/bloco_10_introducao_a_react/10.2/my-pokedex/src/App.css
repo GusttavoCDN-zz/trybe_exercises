@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  align-items: center;
+  background-color: darkgray;
+  display: flex;
+  height: 90px;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  height: calc(100vh - 90px);
+  justify-content: center;
+}
+
+.poke-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 33%;
+  margin: 1px;
+  padding: 15px;
+}
+
+@media screen and ( max-width : 600px){
+  .poke-card {
+    flex-basis: 49%;
+  }
+
+  .poke-card:last-child {
+    flex-grow: 1;
+  }
+}
+
+@media screen and ( max-width : 370px){
+  .poke-card {
+    flex-basis: 100%;
+  }
+}
