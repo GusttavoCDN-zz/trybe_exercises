@@ -29,11 +29,10 @@ class Pokedex extends Component {
   }
 
   allType() {
-    const firePokemons = this.state.pokemons.filter(
-      ({ type }) => type === "Fire"
-    );
+    const allPokemons = pokemons;
+
     const newPokemons = {
-      pokemons: firePokemons,
+      pokemons: allPokemons,
       currentPokemon: 0,
     };
 
@@ -41,9 +40,8 @@ class Pokedex extends Component {
   }
 
   fireType() {
-    const firePokemons = this.state.pokemons.filter(
-      ({ type }) => type === "Fire"
-    );
+    const firePokemons = pokemons.filter(({ type }) => type === "Fire");
+
     const newPokemons = {
       pokemons: firePokemons,
       currentPokemon: 0,
@@ -53,11 +51,11 @@ class Pokedex extends Component {
   }
 
   pyschType() {
-    const firePokemons = this.state.pokemons.filter(
-      ({ type }) => type === "Fire"
-    );
+    const psychPokemons = pokemons.filter(({ type }) => type === "Psychic");
+    console.log(psychPokemons);
+
     const newPokemons = {
-      pokemons: firePokemons,
+      pokemons: psychPokemons,
       currentPokemon: 0,
     };
 
@@ -65,11 +63,9 @@ class Pokedex extends Component {
   }
 
   eletricType() {
-    const firePokemons = this.state.pokemons.filter(
-      ({ type }) => type === "Fire"
-    );
+    const eletricPokemons = pokemons.filter(({ type }) => type === "Electric");
     const newPokemons = {
-      pokemons: firePokemons,
+      pokemons: eletricPokemons,
       currentPokemon: 0,
     };
 
@@ -77,11 +73,9 @@ class Pokedex extends Component {
   }
 
   normalType() {
-    const firePokemons = this.state.pokemons.filter(
-      ({ type }) => type === "Fire"
-    );
+    const normalPokemons = pokemons.filter(({ type }) => type === "Normal");
     const newPokemons = {
-      pokemons: firePokemons,
+      pokemons: normalPokemons,
       currentPokemon: 0,
     };
 
@@ -89,11 +83,9 @@ class Pokedex extends Component {
   }
 
   poisonType() {
-    const firePokemons = this.state.pokemons.filter(
-      ({ type }) => type === "Fire"
-    );
+    const poisonPokemons = pokemons.filter(({ type }) => type === "Poison");
     const newPokemons = {
-      pokemons: firePokemons,
+      pokemons: poisonPokemons,
       currentPokemon: 0,
     };
 
@@ -101,11 +93,9 @@ class Pokedex extends Component {
   }
 
   bugType() {
-    const firePokemons = this.state.pokemons.filter(
-      ({ type }) => type === "Fire"
-    );
+    const bugPokemons = pokemons.filter(({ type }) => type === "Bug");
     const newPokemons = {
-      pokemons: firePokemons,
+      pokemons: bugPokemons,
       currentPokemon: 0,
     };
 
@@ -113,11 +103,9 @@ class Pokedex extends Component {
   }
 
   dragonType() {
-    const firePokemons = this.state.pokemons.filter(
-      ({ type }) => type === "Fire"
-    );
+    const dragonPokemons = pokemons.filter(({ type }) => type === "Dragon");
     const newPokemons = {
-      pokemons: firePokemons,
+      pokemons: dragonPokemons,
       currentPokemon: 0,
     };
 
@@ -133,19 +121,54 @@ class Pokedex extends Component {
           <Pokemon pokemon={pokemons[currentPokemon]} />
         </div>
         <div className="poke_buttons">
-        <button className="button_all button">ALL</button>
+          <button
+            onClick={this.allType.bind(this)}
+            className="button_all button"
+          >
+            ALL
+          </button>
           <button
             onClick={this.fireType.bind(this)}
             className="button_fire button"
           >
             FIRE
           </button>
-          <button className="button_pyschic button">PSYCHIC</button>
-          <button className="button_eletric button">ELETRIC</button>
-          <button className="button_bug button">BUG</button>
-          <button className="button_poison button">POISON</button>
-          <button className="button_normal button">NORMAL</button>
-          <button className="button_dragon button">DRAGON</button>
+          <button
+            onClick={this.pyschType.bind(this)}
+            className="button_pyschic button"
+          >
+            PSYCHIC
+          </button>
+          <button
+            onClick={this.eletricType.bind(this)}
+            className="button_eletric button"
+          >
+            ELETRIC
+          </button>
+          <button
+            onClick={this.bugType.bind(this)}
+            className="button_bug button"
+          >
+            BUG
+          </button>
+          <button
+            onClick={this.poisonType.bind(this)}
+            className="button_poison button"
+          >
+            POISON
+          </button>
+          <button
+            onClick={this.normalType.bind(this)}
+            className="button_normal button"
+          >
+            NORMAL
+          </button>
+          <button
+            onClick={this.dragonType.bind(this)}
+            className="button_dragon button"
+          >
+            DRAGON
+          </button>
         </div>
         <button
           onClick={this.changePokemon}

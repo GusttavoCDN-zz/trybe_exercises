@@ -1,7 +1,7 @@
 class App extends React.Component {
   constructor() {
     super()
-    this.handleClick = this.handleClick.bind(this); // o metódo bind associa o this da classe a função utilizada; Ele pode ser especificado no construtor ou ná chamada da função direto no elemento.
+    this.handleClick = this.handleClick.bind(this); // o método bind associa o this da classe a função utilizada; Ele pode ser especificado no construtor ou ná chamada da função direto no elemento.
     this.clickButtonOne = this.clickButtonOne.bind(this);
     this.clickButtonTwo = this.clickButtonTwo.bind(this);
     this.clickButtonThree = this.clickButtonThree.bind(this);
@@ -14,7 +14,7 @@ class App extends React.Component {
   }
 
   handleClick(callback) {
-    // Jeito Mostrado pela alura para atualizar o estado de componentes
+    // Jeito Mostrado pela Alura para atualizar o estado de componentes
     // const previousCliquesNumber = this.state.numeroDeCliques;
     // const currentCliquesNumber = previousCliquesNumber + 1;
     // const newNumeroDeCliques = {
@@ -24,7 +24,7 @@ class App extends React.Component {
 
     // Jeito mostrado no course para atualizar o estado de componentes
     // A sintaxe aqui deve ser seguida a risca para que funcione da maneira correta.
-    // this.setState((previousStates, _props /* the props params são obrigatorios */) => ({
+    // this.setState((previousStates, _props /* the props params são obrigatórios */) => ({
     //   buttonOneClicks: previousStates.buttonOneClicks + 1,
     // }));
     callback();
