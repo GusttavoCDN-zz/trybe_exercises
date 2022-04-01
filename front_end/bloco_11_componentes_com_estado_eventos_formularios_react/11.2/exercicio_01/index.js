@@ -17,12 +17,7 @@ class PersonalInfo extends React.Component {
         </label>
         <label>
           Email:
-          <input
-            type="email"
-            name="email"
-            value={email}
-            onChange={handleChange}
-          />
+          <input type="email" name="email" value={email} onChange={handleChange} />
         </label>
         <label>
           CPF:
@@ -46,44 +41,40 @@ class State extends React.Component {
     super(props);
     this.state = {
       states: [
-        "Acre",
-        "Alagoas",
-        "Amapá",
-        "Amazonas",
-        "Bahia",
-        "Ceará",
-        "Espirito Santo",
-        "Goiás",
-        "Maranhão",
-        "Mato Grosso",
-        "Mato Grosso do Sul",
-        "Minas Gerais",
-        "Pará",
-        "Paraíba",
-        "Paraná",
-        "Pernanbuco",
-        "Piauí",
-        "Rio de Janeiro",
-        "Rio Grande do Norte",
-        "Rio Grande do Sul",
-        "Rondônia",
-        "Roraima",
-        "Santa Catarina",
-        "São Paulo",
-        "Sergipe",
-        "Tocantins",
-        "Distrito Federal",
+        'Acre',
+        'Alagoas',
+        'Amapá',
+        'Amazonas',
+        'Bahia',
+        'Ceará',
+        'Espirito Santo',
+        'Goiás',
+        'Maranhão',
+        'Mato Grosso',
+        'Mato Grosso do Sul',
+        'Minas Gerais',
+        'Pará',
+        'Paraíba',
+        'Paraná',
+        'Pernanbuco',
+        'Piauí',
+        'Rio de Janeiro',
+        'Rio Grande do Norte',
+        'Rio Grande do Sul',
+        'Rondônia',
+        'Roraima',
+        'Santa Catarina',
+        'São Paulo',
+        'Sergipe',
+        'Tocantins',
+        'Distrito Federal',
       ],
     };
   }
   render() {
     const { states } = this.state;
     return (
-      <select
-        name="state"
-        value={this.props.state}
-        onChange={this.props.handleChange}
-      >
+      <select name="state" value={this.props.state} onChange={this.props.handleChange}>
         <option value="">Select</option>
         {states.map((state) => (
           <option key={state} value={state}>
@@ -104,11 +95,7 @@ class LastJobInfo extends React.Component {
         <legend>Last Job</legend>
         <label>
           Resume:
-          <textarea
-            name="resume"
-            value={resume}
-            onChange={handleChange}
-          ></textarea>
+          <textarea name="resume" value={resume} onChange={handleChange}></textarea>
         </label>
 
         <label>
@@ -118,12 +105,7 @@ class LastJobInfo extends React.Component {
 
         <label>
           Role Description:
-          <input
-            type="text"
-            name="role_desc"
-            value={role_desc}
-            onChange={handleChange}
-          />
+          <input type="text" name="role_desc" value={role_desc} onChange={handleChange} />
         </label>
       </fieldset>
     );
@@ -134,14 +116,14 @@ class Form extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "",
-      email: "",
-      cpf: "",
-      city: "",
-      state: "",
-      resume: "",
-      role: "",
-      role_desc: "",
+      name: '',
+      email: '',
+      cpf: '',
+      city: '',
+      state: '',
+      resume: '',
+      role: '',
+      role_desc: '',
       formErrors: false,
     };
     this.handleChange = this.handleChange.bind(this);
@@ -160,8 +142,7 @@ class Form extends React.Component {
   }
 
   verifyFormErrors() {
-    const { name, email, cpf, city, state, resume, role, role_desc } =
-      this.state;
+    const { name, email, cpf, city, state, resume, role, role_desc } = this.state;
 
     const errors = [
       name.length > 40 || !name,
@@ -176,16 +157,13 @@ class Form extends React.Component {
 
     const hasSomeError = errors.some((error) => error);
 
-
     this.setState({
       formErrors: hasSomeError ? hasSomeError : false,
-    })
+    });
   }
 
-
   render() {
-    const { name, email, cpf, adress, city, state, resume, role, role_desc } =
-      this.state;
+    const { name, email, cpf, adress, city, state, resume, role, role_desc } = this.state;
 
     return (
       <div>
@@ -213,5 +191,5 @@ ReactDOM.render(
   <React.StrictMode>
     <Form />
   </React.StrictMode>,
-  document.getElementById("root")
+  document.getElementById('root')
 );
