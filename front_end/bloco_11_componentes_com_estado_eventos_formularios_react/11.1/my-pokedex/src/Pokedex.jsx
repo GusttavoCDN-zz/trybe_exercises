@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import pokemons from './fetchPokemon.js';
-import localPokemons from './data.js'
+import localPokemons from './data.js';
 import Pokemon from './Pokemon';
 
 class Pokedex extends Component {
@@ -11,18 +11,17 @@ class Pokedex extends Component {
     this.state = {
       pokemons: localPokemons,
       currentPokemon: 0,
-      pokemonsType: [...new Set([...localPokemons.map(({ type }) => type)])],
+      pokemonsType: [...new Set([...localPokemons.map(({ type }) => type)])].sort(),
     };
   }
 
   componentDidMount() {
-    setTimeout(()=> {
+    setTimeout(() => {
       this.setState({
         pokemons: pokemons,
-        pokemonsType:  [...new Set([...pokemons.map(({ type }) => type)])]
+        pokemonsType: [...new Set([...pokemons.map(({ type }) => type)])].sort(),
       });
-
-    }, 1000)
+    }, 4000);
   }
 
   changePokemon() {
@@ -57,13 +56,15 @@ class Pokedex extends Component {
     console.log(pokemons);
 
     const typeButtons = pokemonsType.map((type, index) => {
+
+
       return (
         <button
           key={index}
           className={`button_${type.toLowerCase()} button`}
           onClick={() => this.changeTypeFilter(type)}
         >
-          {type}
+          {type.toUpperCase()}
         </button>
       );
     });
@@ -74,17 +75,14 @@ class Pokedex extends Component {
           <Pokemon pokemon={pokemons[currentPokemon]} />
         </div>
         <div className="poke_buttons">
-          <button
-            onClick={() => this.changeTypeFilter()}
-            className="button_all button"
-          >
+          <button onClick={() => this.changeTypeFilter()} className="button_all button">
             ALL
           </button>
           {typeButtons}
+          <button onClick={this.changePokemon} className="poke_next_button button">
+            Next Pokemon
+          </button>
         </div>
-        <button onClick={this.changePokemon} className="poke_next_button button">
-          Next Pokemon
-        </button>
       </main>
     );
   }

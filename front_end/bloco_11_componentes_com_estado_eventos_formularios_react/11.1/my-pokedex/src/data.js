@@ -1,93 +1,174 @@
 const pokemons = [
   {
-      id: 1,
-      name: "Bulbasaur",
-      type: 'grass',
-      averageWeight: {
-          value: 69,
-          measurementUnit: "kg"
-      },
-      image: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+    id: 1,
+    name: 'Bulbasaur',
+    type: 'grass',
+    averageWeight: {
+      value: 69,
+      measurementUnit: 'kg',
+    },
+    image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png',
   },
   {
-      id: 4,
-      name: "Charmander",
-      type: 'Fire',
-      averageWeight: {
-          value: 8.5,
-          measurementUnit: "kg"
-      },
-      image: "https://archives.bulbagarden.net/media/upload/0/0a/Spr_5b_004.png",
+    averageWeight: { value: 130, measurementUnit: 'kg' },
+    id: 2,
+    image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png',
+    name: 'ivysaur',
+    type: 'grass',
   },
   {
-      id: 10,
-      name: "Caterpie",
-      type: 'Bug',
-      averageWeight: {
-          value: 2.9,
-          measurementUnit: "kg"
-      },
-      image: "https://cdn2.bulbagarden.net/upload/8/83/Spr_5b_010.png",
+    id: 10,
+    name: 'Caterpie',
+    type: 'bug',
+    averageWeight: {
+      value: 2.9,
+      measurementUnit: 'kg',
+    },
+    image: 'https://cdn2.bulbagarden.net/upload/8/83/Spr_5b_010.png',
   },
   {
-      id: 23,
-      name: "Ekans",
-      type: 'Poison',
-      averageWeight: {
-          value: 6.9,
-          measurementUnit: "kg"
-      },
-      image: "https://archives.bulbagarden.net/media/upload/1/18/Spr_5b_023.png",
+    id: 23,
+    name: 'Ekans',
+    type: 'poison',
+    averageWeight: {
+      value: 6.9,
+      measurementUnit: 'kg',
+    },
+    image: 'https://archives.bulbagarden.net/media/upload/1/18/Spr_5b_023.png',
   },
   {
-      id: 65,
-      name: "Alakazam",
-      type: 'Psychic',
-      averageWeight: {
-          value: 48.0,
-          measurementUnit: "kg"
-      },
-      image: "https://cdn2.bulbagarden.net/upload/8/88/Spr_5b_065_m.png"
+    id: 65,
+    name: 'Alakazam',
+    type: 'psychic',
+    averageWeight: {
+      value: 48.0,
+      measurementUnit: 'kg',
+    },
+    image: 'https://cdn2.bulbagarden.net/upload/8/88/Spr_5b_065_m.png',
   },
   {
-      id: 151,
-      name: "Mew",
-      type: 'Psychic',
-      averageWeight: {
-          value: 4.0,
-          measurementUnit: "kg"
-      },
-      image: "https://cdn2.bulbagarden.net/upload/4/43/Spr_5b_151.png",
+    id: 151,
+    name: 'Mew',
+    type: 'psychic',
+    averageWeight: {
+      value: 4.0,
+      measurementUnit: 'kg',
+    },
+    image: 'https://cdn2.bulbagarden.net/upload/4/43/Spr_5b_151.png',
   },
   {
-      id: 78,
-      name: "Rapidash",
-      type: 'Fire',
-      averageWeight: {
-          value: 95.0,
-          measurementUnit: "kg"
-      },
-      image: "https://cdn2.bulbagarden.net/upload/5/58/Spr_5b_078.png",
+    id: 78,
+    name: 'Rapidash',
+    type: 'fire',
+    averageWeight: {
+      value: 95.0,
+      measurementUnit: 'kg',
+    },
+    image: 'https://cdn2.bulbagarden.net/upload/5/58/Spr_5b_078.png',
   },
   {
-      id: 143,
-      name: "Snorlax",
-      type: 'Normal',
-      averageWeight: {
-          value: 460.0,
-          measurementUnit: "kg"
-      },
-      image: "https://cdn2.bulbagarden.net/upload/4/40/Spr_5b_143.png",
+    id: 143,
+    name: 'Snorlax',
+    type: 'normal',
+    averageWeight: {
+      value: 460.0,
+      measurementUnit: 'kg',
+    },
+    image: 'https://cdn2.bulbagarden.net/upload/4/40/Spr_5b_143.png',
   },
   {
-      id: 148,
-      name: "Dragonair",
-      type: 'Dragon',
-      averageWeight: {
-          value: 16.5,
-          measurementUnit: "kg"
-      },
-      image: "https://cdn2.bulbagarden.net/upload/2/2c/Spr_5b_148.png",
+    id: 148,
+    name: 'Dragonair',
+    type: 'dragon',
+    averageWeight: {
+      value: 16.5,
+      measurementUnit: 'kg',
+    },
+    image: 'https://cdn2.bulbagarden.net/upload/2/2c/Spr_5b_148.png',
+  },
+  {
+    averageWeight: { value: 630, measurementUnit: 'kg' },
+    id: 641,
+    image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/641.png',
+    name: 'tornadus-incarnate',
+    type: 'flying',
+  },
+  {
+    averageWeight: { value: 8880, measurementUnit: 'kg' },
+    id: 799,
+    image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/799.png',
+    name: 'guzzlord',
+    type: 'dark',
+  },
+  {
+    averageWeight: { value: 995, measurementUnit: 'kg' },
+    id: 712,
+    image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/712.png',
+    name: 'bergmite',
+    type: 'ice',
+  },
+  {
+    averageWeight: { value: 952, measurementUnit: 'kg' },
+    id: 374,
+    image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/374.png',
+    name: 'beldum',
+    type: 'steel',
+  },
+  {
+    averageWeight: { value: 120, measurementUnit: 'kg' },
+    id: 27,
+    image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/27.png',
+    name: 'sandshrew',
+    type: 'ground',
+  },
+  {
+    averageWeight: { value: 320, measurementUnit: 'kg' },
+    id: 57,
+    image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/57.png',
+    name: 'primeape',
+    type: 'fighting',
+  },
+  {
+    averageWeight: { value: 200, measurementUnit: 'kg' },
+    id: 74,
+    image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/74.png',
+    name: 'geodude',
+    type: 'rock',
+  },
+  {
+    averageWeight: { value: 90, measurementUnit: 'kg' },
+    id: 7,
+    image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png',
+    name: 'squirtle',
+    type: 'water',
+  },
+  {
+    averageWeight: { value: 300, measurementUnit: 'kg' },
+    id: 26,
+    image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/26.png',
+    name: 'raichu',
+    type: 'electric',
+  },
+  {
+    averageWeight: { value: 1, measurementUnit: 'kg' },
+    id: 92,
+    image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/92.png',
+    name: 'gastly',
+    type: 'ghost',
+  },
+  {
+    averageWeight: { value: 270, measurementUnit: 'kg' },
+    id: 197,
+    image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/197.png',
+    name: 'umbreon',
+    type: 'dark',
+  },
+  {
+    averageWeight: {value: 75, measurementUnit: 'kg'},
+    id: 35,
+    image: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/35.png",
+    name: "clefairy",
+    type: "fairy",
   }
 ];
 

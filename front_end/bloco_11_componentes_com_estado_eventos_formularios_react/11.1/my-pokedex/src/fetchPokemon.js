@@ -18,7 +18,7 @@ const getPokemons = async (pokeNumber) => {
 	pokemons.push(pokeObject);
 }
 const fetchPokemons = async () => {
-	for (let i = 1; i <= 500; i+= 1) {
+	for (let i = 1; i <= 898; i+= 1) {
 		getPokemons(i);
 	}
 

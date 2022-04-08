@@ -14,25 +14,33 @@ header {
 
 main {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   height: calc(100vh - 90px);
   align-items: center;
 }
 
 .poke-card {
-  border: 1px solid #ccc;
-  border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 1rem;
-  height: 300px;
-  width: 500px;
+  height: 100%;
+  flex-basis: 70%;
+  border-right: 1px solid black;
+  font-size: 1.5rem;
+}
+
+.poke-name {
+  font-weight: bold;
+}
+
+.poke-card img {
+  width: 50%;
 }
 
 .poke_buttons {
   display: flex;
+  flex-basis: 30%;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -46,4 +54,15 @@ main {
   margin-top: 1rem;
   width: 200px;
   height: 50px;
+  border: 2px solid black;
+  border-radius: 5px; 
+}
+
+.button {
+  background-color: orange;
+  cursor: pointer;
+}
+
+.poke_next_button {
+  background-color: green;
 }
