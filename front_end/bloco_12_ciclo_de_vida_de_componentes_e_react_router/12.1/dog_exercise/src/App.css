@@ -1,0 +1,22 @@
+.dog_div {
+	display: flex;
+	flex-direction: column;
+	width: 500px;
+	margin: 0 auto;
+}
+
+.loading {
+	position: absolute;
+	top: 150px;
+	right: 550px;
+	font-size: 2rem;
+}
+
+.dog_div button {
+	margin-top: 20px;
+	height: 100px;
+}
+.dog {
+	width: 500px;
+	height:500px;
+}
