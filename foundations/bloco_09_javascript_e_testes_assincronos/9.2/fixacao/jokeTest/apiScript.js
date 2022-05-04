@@ -1,26 +1,30 @@
-// apiScript.js     
-const API_URL = 'https://icanhazdadjoke.com/';
-
+// apiScript.js
+const API_URL = "https://icanhazdadjoke.com/";
 
 function putJokeOnHTML(joke) {
-  const div = document.createElement('div');
+  const div = document.createElement("div");
+  console.log(joke);
   div.innerHTML = joke;
 
-  document.querySelector('body').appendChild(div);
+  document.getElementById("jokeContainer").appendChild(div);
 }
 
-
-const fetchJoke = () => {
+const fetchJoke = async () => {
   const myObject = {
-    method: 'GET',
-    headers: { 'Accept': 'application/json' }
+    method: "GET",
+    headers: { Accept: "application/json" },
   };
 
-  fetch(API_URL, myObject)
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data)
-    });
+  const response = await fetch(API_URL, myObject);
+  const { joke } = await response.json();
+
+  putJokeOnHTML(joke);
+  
+  // fetch(API_URL, myObject)
+  //   .then((response) => response.json())
+  //   .then((data) => {
+  //     putJokeOnHTML(data.joke);
+  //   });
 };
 
 window.onload = () => fetchJoke();

@@ -1,3 +1,5 @@
+// const fetch = require('node-fetch');
+
 const URL_API = 'https://api.coincap.io/v2/assets'
 const CURRENCY_API = 'https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.min.json';
 
@@ -47,9 +49,9 @@ const fetchCrypto = async () => {
 
     get10firtsCoins(coinsArray);
   } catch (error) {
-    error.toString();
-    console.log(`Thats is a error`);
+    console.log(error.toString());
   }
 }
 
 window.onload = () => fetchCrypto();
+
