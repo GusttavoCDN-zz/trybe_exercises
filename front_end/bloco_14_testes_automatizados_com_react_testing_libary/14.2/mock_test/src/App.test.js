@@ -6,22 +6,16 @@ afterEach(() => jest.clearAllMocks());
 
 it('fetches a joke', async () => {
   const joke = {
-    id: '7h3oGtrOfxc',
-    joke: 'Whiteboards ... are remarkable.',
+    joke: 'Whiteboard ... are remarkable.',
+    id: '75455454',
     status: 200,
   };
 
-  jest.spyOn(global, 'fetch');
-  global.fetch.mockResolvedValue({
+  global.fetch = jest.fn().mockResolvedValue({
     json: jest.fn().mockResolvedValue(joke),
-  });
+  })
 
-  render(<App />);
-  const renderedJoke = await screen.findByText('Whiteboards ... are remarkable.');
+  render(<App />)
+  const renderedJoke = await screen.findByText(joke.joke);
   expect(renderedJoke).toBeInTheDocument();
-  expect(global.fetch).toBeCalledTimes(1);
-  expect(global.fetch).toBeCalledWith(
-    'https://icanhazdadjoke.com/',
-    { headers: { Accept: 'application/json' } },
-  );
 });
