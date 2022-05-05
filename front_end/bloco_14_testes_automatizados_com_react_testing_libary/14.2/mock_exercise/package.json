@@ -1,0 +1,14 @@
+{
+  "name": "mock_exercise",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "jest": "^28.0.3",
+    "vite": "^2.9.7"
+  }
+}
