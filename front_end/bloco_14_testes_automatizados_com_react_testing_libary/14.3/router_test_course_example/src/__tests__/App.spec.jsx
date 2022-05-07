@@ -31,12 +31,13 @@ describe('Teste total', () => {
   });
 
   it('Deve testar um caminho não existente e a renderização do Not Found', () => {
-    const { history } = renderWithRouter(<App/>);
+    const { history } = renderWithRouter(<App />);
+
     act(() => {
       history.push('/pagina/que-nao-existe');
-    })
+    });
 
-    const notFoundTitle = screen.getByRole('heading', {name: 'Página não encontrada'});
+    const notFoundTitle = screen.getByRole('heading', { name: 'Página não encontrada' });
     expect(notFoundTitle).toBeInTheDocument();
-  })
+  });
 });
