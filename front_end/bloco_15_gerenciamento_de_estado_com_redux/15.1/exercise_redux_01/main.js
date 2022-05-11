@@ -1,3 +1,5 @@
+import { createStore } from 'redux';
+
 // * Pega todos os botes necessarios
 const NEXT_BUTTON = document.getElementById('next');
 const PREVIOUS_BUTTON = document.getElementById('previous');
@@ -23,7 +25,6 @@ const randomColor = () => {
   const g = Math.floor(Math.random() * 255) + 1;
   const b = Math.floor(Math.random() * 255) + 1;
   const newColor = `rgb(${r}, ${g}, ${b})`;
-  console.log(newColor);
 
   return {
     type: RANDOM_COLOR,
@@ -55,7 +56,7 @@ const reducer = (state = INITIAL_STATE, action) => {
   }
 };
 
-const Store = Redux.createStore(reducer);
+const Store = createStore(reducer);
 
 Store.subscribe(() => {
   const currentState = Store.getState();
@@ -69,6 +70,7 @@ Store.subscribe(() => {
 
 NEXT_BUTTON.addEventListener('click', () => {
   Store.dispatch(nextColor());
+  console.log('next')
 });
 
 PREVIOUS_BUTTON.addEventListener('click', () => {
