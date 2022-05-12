@@ -3,6 +3,9 @@
 
 ## Aprendizados do Dia
 
+- O que é Redux e qual o problema que ele busca solucionar.
+- Criação de uma store e utilização das funções de manipulação de estado dela.
+- Oque são Actions, reducers, dispatch e subscribe no Redux.
 
 ## Material de Refêrencia
 
