@@ -1,4 +1,26 @@
-const Redux = require('redux');
+const { createStore } = require('redux');
+
+
+// * Implementação do createStore no Redux
+// function createStore(reducer) {
+//   let state;
+//   const subscribes = [];
+
+//   function subscribe(func) {
+//     subscribes.push(func);
+//   }
+
+//   function dispatch(action) {
+//     state  = reducer(state, action);
+//     subscribes.forEach(func => func());
+//   }
+
+//   return {
+//     getState: () => state,
+//     subscribe,
+//     dispatch,
+//   }
+// }
 
 const INITIAL_STATE = {
   login: false,
@@ -28,12 +50,12 @@ const reducer = (state = INITIAL_STATE, action) => {
 };
 
 // * Configuração Inicial da Store. Aqui fica salvo o estado inicial, é necessario que exista um reducer que retorne esse estado inicial
-const store = Redux.createStore(reducer);
+const store = createStore(reducer);
 
 store.dispatch(makeLogin('gusttavo.x.santos@gmail.com'));
 
 store.getState();
 
-store.dispatch(makeLogin("pr.marcos@gmail.com"));
+store.dispatch(makeLogin("otakufedido@gmail.com"));
 
 store.getState()
