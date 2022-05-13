@@ -1,9 +1,0 @@
-.container {
-  margin: 0.5rem;  
-}
-
-#curriculum_resume,
-#role_description {
-  display: flex;
-  flex-direction: column;
-}
